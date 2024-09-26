@@ -1,112 +1,102 @@
-from typing import List
-from uuid import uuid4, UUID
-from uuid import uuid4
-from fastapi import FastAPI
-from pydantic.v1 import UUID1
+from fastapi import FastAPI, Depends, HTTPException, File, UploadFile, Form
+from datetime import date
+from sqlalchemy.orm  import Session
+from secrets import token_hex
 
-from models import Country, Company, Contract
+from  sql_app import models, schemas, crud
+from  sql_app.database import SessionLocal, engine
 
+models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
-db: List[Contract] = [
-    Contract(
-        id= UUID('7e7584d9-9af5-41cd-8876-3abe528cc600'),
-        name='Contract 1',
-        country=Country.Kenya,
-        company=[Company.AirFrance],
-        category='Category 1',
-        start_date='2021-01-01',
-        end_date='2021-12-31'
-    ),
-    Contract(
-        id= UUID('dbf0688d-9b6a-4af2-8d11-a5f2befecfcc'),
-        name='Contract 2',
-        country=Country.Uganda,
-        company=[Company.KLM],
-        category='Category 2',
-        start_date='2021-01-01',
-        end_date='2021-12-31'
-    ),
-    Contract(
-        id= UUID('befef56e-6386-4953-8d90-ebad59614016'),
-        name='Contract 3',
-        country=Country.Tanzania,
-        company=[Company.AirFrance, Company.KLM],
-        category='Category 3',
-        start_date='2021-01-01',
-        end_date='2021-12-31'
-    ),
-    Contract(
-        id= UUID('37bef92f-42df-4c94-834f-2fb71eb3a2eb'),
-        name='Contract 4',
-        country=Country.Tanzania,
-        company=[Company.AirFrance],
-        category='Category 3',
-        start_date='2021-01-01',
-        end_date='2021-12-31'
-    ),
-]
+
+# Dependency
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 
-@app.get('/contracts/')
-async def get_contracts():
-    return db
-@app.post('/create-contract/')
-async def create_contract(contract: Contract):
-    if contract:
-        return { 'contract': contract}
-    return {'result': 'fail', 'message': 'Could not create contract'}
+@app.post('/users/', response_model=schemas.User)
+def create_user(user: schemas.UserCreate, db: Session=Depends(get_db)):
+    db_user = crud.get_user_by_email(db, email=user.email)
+    if db_user:
+        raise HTTPException(status_code=400, detail='Email already exists')
+    return crud.create_user(db=db, user=user)
 
-@app.get('/contracts-country/{country}')
-async def get_contracts_by_country(country: Country):
-    contracts = [contract for contract in db if contract.country == country]
-    if not contracts:
-        return {'result': 'fail', 'message': 'Contracts not found'}
-    return contracts
+@app.get('/users/{user_id}', response_model=schemas.User)
+def read_user(user_id: int, db: Session=Depends(get_db)):
+    db_user = crud.get_user(db, user_id=user_id)
+    if db_user is None:
+        raise HTTPException(status_code=404, detail='User not found')
+    return db_user
 
-@app.get('/contracts-company/{company}')
-async def get_contracts_by_company(company: Company):
-    contracts =  [contract for contract in db if company in contract.company]
-    if not contracts:
-        return {'result': 'fail', 'message': 'Contracts not found'}
-    return contracts
+@app.post('/contracts', response_model=schemas.Contract)
+async def create_contract(
+        contract_name: str=Form(...),
+        category: str=Form(...),
+        start_date: date=Form(...),
+        end_date: date=Form(...),
+        country: schemas.Country=Form(...),
+        vendor_name: str=Form(...),
+        company_name: schemas.Company=Form(...),
+        expired_status: bool=Form(...),
+        file: UploadFile=File(...),
+        db: Session=Depends(get_db)):
+    required_ext = {'pdf', 'doc', 'docx'}
+    print(f"{contract_name}")
+    db_contract = crud.get_contract_by_name(db=db, contract_name = contract_name)
+    if db_contract:
+        print(f"the contract exists {db_contract}")
+        raise HTTPException(status_code=400, detail='Contract already exists')
+    if db_contract is None:
+        print(f"The contract does not exist yet {db_contract}")
+        file_ext = file.filename.split('.').pop().lower()
+        print(f"{file_ext}")
+        if file_ext not in required_ext:
+            raise HTTPException(status_code=400, detail='Invalid file type')
+        file_name = token_hex(20)
+        file_path=f"{file_name}. {file_ext}"
+        with open(file_path, 'wb') as f:
+            content = await file.read()
+            f.write(content)
+        contract_data = schemas.ContractCreate(
+            contract_name=contract_name,
+            category=category,
+            start_date=start_date,
+            end_date=end_date,
+            country=country,
+            vendor_name=vendor_name,
+            company_name=company_name,
+            expired_status=expired_status,
+            file_upload=file_path
+        )
+        return crud.create_contract(db, contract=contract_data)
 
-@app.patch('/update-contract/{contract_id}')
-async def update_contract(contract_id: UUID, contract: Contract ):
-    for cont in db:
-        if cont.id == contract_id:
-            cont.name = contract.name
-            cont.country = contract.country
-            cont.company = contract.company
-            cont.category = contract.category
-            cont.start_date = contract.start_date
-            cont.end_date = contract.end_date
-            return {'result': 'success', 'message': 'Contract updated'}
-        return {'result': 'fail', 'message': 'Contract not found'}
+@app.get('/contracts/{contract_id}', response_model=schemas.Contract)
+def read_contract(contract_id: int, db: Session=Depends(get_db)):
+    db_contract = crud.get_contract(db, contract_id)
+    if db_contract is None:
+        raise HTTPException(status_code=40, detail='Contract not found')
+    return db_contract
 
-@app.get('/contracts-category/{category}')
-async def get_contract_by_category(category: str):
-   contracts =  [contract for contract in db if contract.category == category]
-   if not contracts:
-       return {'result': 'fail', 'message': 'Contracts not found'}
-   return contracts
+@app.get('/contracts/', response_model=list[schemas.Contract])
+def get_contracts(db: Session=Depends(get_db), skip: int=0, limit: int=100):
+    db_contracts = crud.get_contracts(db, skip=skip, limit=limit)
+    return db_contracts
 
-@app.get('/contracts-start-date/{start_date}')
-async def get_contract_by_date(start_date: str):
-    contracts = [contract for contract in db if contract.start_date == start_date]
-    if not contracts:
-        return {'result': 'fail', 'message': 'Contracts not found'}
-    return contracts
+@app.delete('/contracts/{contract_id}')
+def delete_contract(contract_id: int, db: Session=Depends(get_db)):
+    db_contract = crud.get_contract(db, contract_id)
+    print(db_contract)
+    if db_contract is None:
+        raise HTTPException(status_code=404, detail='Contract not found')
+    return crud.delete_contract(db, contract_id)
 
-@app.get('/contracts-end-date/{end_date}')
-async def get_contract_by_date(end_date: str):
-    contracts = [contract for contract in db if contract.end_date == end_date]
-    if not contracts:
-        return {'result': 'fail', 'message': 'Contracts not found'}
-    return contracts
-
-@app.get('/contract-name/{name}')
-async def get_contract_by_name(name: str):
-    for contract in db:
-        if contract.name == name:
-            return [contract]
-        return {'result': 'fail', 'message': 'Contract not found'}
+@app.put('/contracts/{contract_id}', response_model=schemas.Contract)
+def update_contract(contract_id: int, contract: schemas.Contract, db: Session=Depends(get_db)):
+    db_contract = crud.get_contract(db, contract_id)
+    if db_contract is None:
+        raise HTTPException(status_code=404, detail='Contract not found')
+    return crud.update_contract(db, contract)
