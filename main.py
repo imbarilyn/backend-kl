@@ -57,10 +57,19 @@ async def create_contract(
         if file_ext not in required_ext:
             raise HTTPException(status_code=400, detail='Invalid file type')
         file_name = token_hex(20)
-        file_path=f"{file_name}. {file_ext}"
-        with open(file_path, 'wb') as f:
-            content = await file.read()
-            f.write(content)
+
+        # Ensure the uploads directory exists
+        try:
+            os.makedirs('uploads', exist_ok=True)
+            file_path = os.path.join('uploads', f"{file_name}. {file_ext}")
+             # the  f is an object created once the file is open
+            # we use 'wb' format tto write binary data to file for it may content images or pdfs
+            with open(file_path, 'wb') as f:
+                content = await file.read()
+                f.write(content)
+        except FileExistsError:
+            raise HTTPException(status_code=400, detail='File already exists')
+
         contract_data = schemas.ContractCreate(
             contract_name=contract_name,
             category=category,
