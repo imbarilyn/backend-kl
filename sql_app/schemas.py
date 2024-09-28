@@ -29,7 +29,7 @@ class ContractBase(BaseModel):
     country: Country
     vendor_name: str
     company_name: Company
-    expired_status: bool
+    status: bool
     file_upload: str
 
 
