@@ -7,11 +7,29 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
+import sql_app.schemas
 from sql_app import models, schemas, crud
 from sql_app.database import SessionLocal, engine
+from pydantic import BaseModel
+from typing import ClassVar
+
 
 models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
+# Mount upload directory as  static files
+app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+
+origins = [
+    'http://localhost:5173'
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins='*',
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*']
+)
 
 
 # Dependency
