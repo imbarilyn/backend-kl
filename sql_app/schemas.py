@@ -13,6 +13,8 @@ class Country(str, Enum):
     burundi='Burundi'
     malawi='Malawi'
     ethiopia='Ethiopia'
+    sudan='Sudan'
+
 
 class Company(str, Enum):
     af='Air France'
@@ -24,12 +26,12 @@ class Company(str, Enum):
 class ContractBase(BaseModel):
     contract_name: str
     category: str
-    start_date: date
-    end_date: date
+    start_date: str
+    end_date: str
     country: Country
     vendor_name: str
     company_name: Company
-    status: bool
+    status: str
     file_upload: str
 
 
@@ -54,6 +56,20 @@ class UserCreate(UserBase):
 class User(UserBase):
     id: int
     email:str
+
+    class Config:
+        orm_mode = True
+
+
+class ExpiryEmailBase(BaseModel):
+    email: str
+
+class ExpiryEmailCreate(ExpiryEmailBase):
+    pass
+
+class ExpiryEmail(ExpiryEmailBase):
+    id: int
+
 
     class Config:
         orm_mode = True
