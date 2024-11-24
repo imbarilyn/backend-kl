@@ -3,6 +3,9 @@ from datetime import date
 from sqlalchemy.orm import Session
 from secrets import token_hex
 import os
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from sql_app import models, schemas, crud
 from sql_app.database import SessionLocal, engine
