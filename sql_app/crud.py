@@ -1,6 +1,11 @@
 from sqlalchemy.orm import Session
+from sqlalchemy.sql.operators import desc_op
+
 from  .  import models, schemas
+from fastapi.encoders import jsonable_encoder
 import bcrypt
+
+
 # Get user by user_id
 def get_user(db: Session, user_id: int):
     return db.query(models.User).filter(models.User.id == user_id).first()
@@ -32,8 +37,23 @@ def get_contract_by_name(db: Session, contract_name: str):
     print(f"the contract is {cont}")
     return cont
 
-def get_contracts(db: Session, skip: int=0, limit: int=100):
-    return db.query(models.Contract).offset(skip).limit(limit).all()
+def get_contracts(db: Session):
+    # contracts = db.query(models.Contract).offset(skip).limit(limit).all()
+    contracts = db.query(models.Contract).all()
+    # print(contracts)
+    # contracts_json = jsonable_encoder(contracts)
+    if contracts:
+        return {
+            'result': 'success',
+            'contracts': contracts
+        }
+        # return contracts
+    return {
+        'result': 'fail',
+        'contracts':[]
+    }
+
+
 
 def get_contract_by_country(db: Session, country: str):
     return db.query(models.Contract).filter(models.Contract.country == country).all()
@@ -54,10 +74,12 @@ def get_contract_by_vendor(db: Session, vendor: str):
 def create_contract(db: Session, contract: schemas.ContractCreate):
     print(f"we are now putting the contract in the db hooray{contract}")
     db_contract = models.Contract(**contract.model_dump())
+    if db_contract  is None:
+        return {'message': 'Contract not created', 'result': 'fail'}
     db.add(db_contract)
     db.commit()
     db.refresh(db_contract)
-    return db_contract
+    return {'message': 'Contract created successfully', 'result': 'success'}
 
 def delete_contract(db: Session, contract_id: int):
     db_contract = db.query(models.Contract).filter(models.Contract.id == contract_id).first()
@@ -69,9 +91,35 @@ def delete_contract(db: Session, contract_id: int):
 
 def update_contract(db: Session , contract: schemas.Contract):
     db_contract = db.query(models.Contract).filter(models.Contract.id == contract.id).first()
-    if db_contract:
-        for key, value in db_contract.dict().items():
-            setattr(db_contract, key, value)
+    if contract:
         db.commit()
         return {'message': 'Contract updated successfully', 'result': 'success'}
     return {'message': 'Contract not found', 'result': 'fail'}
+
+def get_email_by_name(db: Session, email: schemas.ExpiryEmailBase):
+    # print(f'first email {email}')
+    return db.query(models.ExpiryEmail).filter(models.ExpiryEmail.email == email).first()
+
+
+def add_email(db: Session, email: schemas.ExpiryEmailBase):
+
+    db_email = models.ExpiryEmail(email=email.email)
+
+    if db_email is None:
+        return {'message': 'Email not added', 'result': 'fail'}
+    db.add(db_email)
+    db.commit()
+    db.refresh(db_email)
+    return {'message': 'Email added successfully', 'result': 'success'}
+
+def get_emails(db: Session):
+    emails = db.query(models.ExpiryEmail).order_by(desc_op(models.ExpiryEmail.id)).limit(3).all()
+    # emails = db.query(models.ExpiryEmail).all()
+    if emails:
+        email_list = [email.email for email in emails]
+        return {'result': 'success', 'emails': email_list}
+    return {'result': 'fail', 'emails': None}
+
+
+
+
