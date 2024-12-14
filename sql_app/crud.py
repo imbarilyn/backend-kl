@@ -96,8 +96,13 @@ def update_contract(db: Session , contract: schemas.Contract):
         return {'message': 'Contract updated successfully', 'result': 'success'}
     return {'message': 'Contract not found', 'result': 'fail'}
 
-def get_email_by_name(db: Session, email: schemas.ExpiryEmailBase):
-    # print(f'first email {email}')
+def max_email(db: Session):
+    emails = db.query(models.ExpiryEmail).all()
+    return len(emails) > 2
+
+
+
+def get_email_by_name(db: Session, email: str):
     return db.query(models.ExpiryEmail).filter(models.ExpiryEmail.email == email).first()
 
 
