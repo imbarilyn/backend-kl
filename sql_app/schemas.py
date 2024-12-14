@@ -1,6 +1,7 @@
 from datetime import datetime, date
 from enum import Enum
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+
 
 class Country(str, Enum):
     kenya='Kenya'
@@ -20,6 +21,9 @@ class Company(str, Enum):
     af='Air France'
     klm='KLM'
 
+class Status(int, Enum):
+    active = 1
+    expired = 0
 
 
 
