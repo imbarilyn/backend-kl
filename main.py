@@ -68,10 +68,9 @@ async def create_contract(
         country: schemas.Country = Form(...),
         vendor_name: str = Form(...),
         company_name: schemas.Company = Form(...),
-        status: str = Form(...),
         file: UploadFile = File(...),
         db: Session = Depends(get_db)):
-    required_ext = {'pdf', 'doc', 'docx'}
+    required_ext = {'pdf'}
     print(f"{contract_name}")
     db_contract = crud.get_contract_by_name(db=db, contract_name=contract_name)
     if db_contract:
@@ -86,12 +85,13 @@ async def create_contract(
         print(f"{file_ext}")
         if file_ext not in required_ext:
             raise HTTPException(status_code=400, detail='Invalid file type')
-        file_name = token_hex(20)
+        file_name = token_hex(10)
 
         # Ensure the uploads directory exists
         try:
             os.makedirs('uploads', exist_ok=True)
             file_path = os.path.join('uploads', f"{file_name}.{file_ext}")
+            file_name_server = f"{file_name}.{file_ext}"
              # the  f is an object created once the file is open
             # we use 'wb' format tto write binary data to file for it may content images or pdfs
             with open(file_path, 'wb') as f:
@@ -108,8 +108,7 @@ async def create_contract(
             country=country,
             vendor_name=vendor_name,
             company_name=company_name,
-            status=status,
-            file_upload=file_path
+            file_upload=file_name_server
         )
         return crud.create_contract(db, contract=contract_data)
 
@@ -131,7 +130,9 @@ def read_file(file_name: str):
 def get_contracts(db: Session = Depends(get_db)):
     db_contracts = crud.get_contracts(db)
     # db_contracts = db.query(models.Contract).all()
-    print(db_contracts)
+    # print(db_contracts[0].status)
+    for contract in db_contracts['contracts']:
+        print(contract.email_sent)
     return db_contracts
 
 
@@ -156,9 +157,11 @@ def update_contract(contract_id: int, contract: schemas.Contract, db: Session = 
 
 @app.post('/add-emails')
 def add_email(email: sql_app.schemas.ExpiryEmailBase, db: Session = Depends(get_db)):
-    print(f"Email: {email}")
-
-    db_email = crud.get_email_by_name(db, email)
+    check_max = crud.max_email(db)
+    if check_max:
+        return {'message': 'Maximum number of emails reached', 'result': 'fail'}
+    db_email = crud.get_email_by_name(db, email.email)
+    print(f'{db_email}')
     if db_email:
         return {'message': 'Email already exists', 'result': 'fail'}
     return crud.add_email(db, email)
@@ -168,3 +171,22 @@ def get_emails(db: Session = Depends(get_db)):
     emails = crud.get_emails(db)
     print(emails)
     return emails
+
+@app.delete('/delete-email/{email_id}')
+def delete_email(email_id: int, db: Session = Depends(get_db)):
+    db_email = crud.get_email(email_id, db)
+    if db_email is None:
+        return {'message': 'Email not found', 'result': 'fail'}
+    return crud.delete_email(email_id, db)
+
+@app.put('/update-email/{email_id}')
+def update_email(email_id: int, email: sql_app.schemas.ExpiryEmail,  db: Session = Depends(get_db)):
+   email_db = crud.get_email(email_id, db)
+   print(f"Email--: {email}")
+   if email_db:
+       print(f'{email_db}')
+       return crud.update_email(email, db)
+   return {'message': 'Email not found', 'result': 'fail'}
+
+
+
