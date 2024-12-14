@@ -91,7 +91,16 @@ def delete_contract(db: Session, contract_id: int):
 
 def update_contract(db: Session , contract: schemas.Contract):
     db_contract = db.query(models.Contract).filter(models.Contract.id == contract.id).first()
-    if contract:
+    if db_contract:
+        db_contract.contract_name = contract.contract_name
+        db_contract.category = contract.category
+        db_contract.start_date = contract.start_date
+        db_contract.end_date = contract.end_date
+        db_contract.country = contract.country
+        db_contract.vendor_name = contract.vendor_name
+        db_contract.company_name = contract.company_name
+        db_contract.status = contract.status
+        db_contract.file_upload = contract.file_upload
         db.commit()
         return {'message': 'Contract updated successfully', 'result': 'success'}
     return {'message': 'Contract not found', 'result': 'fail'}
@@ -118,12 +127,33 @@ def add_email(db: Session, email: schemas.ExpiryEmailBase):
     return {'message': 'Email added successfully', 'result': 'success'}
 
 def get_emails(db: Session):
-    emails = db.query(models.ExpiryEmail).order_by(desc_op(models.ExpiryEmail.id)).limit(3).all()
+    emails = db.query(models.ExpiryEmail).order_by(desc_op(models.ExpiryEmail.id)).all()
     # emails = db.query(models.ExpiryEmail).all()
     if emails:
-        email_list = [email.email for email in emails]
+        email_list = [email for email in emails]
         return {'result': 'success', 'emails': email_list}
     return {'result': 'fail', 'emails': None}
+
+def get_email(email_id: int, db: Session):
+    email = db.query(models.ExpiryEmail).filter(models.ExpiryEmail.id == email_id).first()
+    return email
+
+def delete_email(email_id: int, db: Session):
+    db_email = db.query(models.ExpiryEmail).filter(models.ExpiryEmail.id == email_id).first()
+    if db_email is None:
+        return {'message': 'Email not found', 'result': 'fail'}
+    db.delete(db_email)
+    db.commit()
+    return {'message': 'Email deleted successfully', 'result': 'success'}
+
+def update_email(email: schemas.ExpiryEmail, db: Session):
+    db_email = db.query(models.ExpiryEmail).filter(models.ExpiryEmail.id == email.id).first()
+    if db_email:
+        db_email.email = email.email
+        db.commit()
+        return {'message': 'Email updated successfully', 'result': 'success'}
+    return {'message': 'Email not found', 'result': 'fail'}
+
 
 
 
