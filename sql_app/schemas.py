@@ -1,4 +1,5 @@
 from datetime import datetime, date
+from email.policy import default
 from enum import Enum
 from pydantic import BaseModel, Field
 
@@ -44,7 +45,8 @@ class ContractBase(BaseModel):
 
 
 class ContractCreate(ContractBase):
-    pass
+    status: Status = Field(default = Status.active.value, description="Whether it is expired or active")
+    email_sent: EmailSent = Field(default = EmailSent.no.value, description="Whether the email notification for expiration has been sent or not")
 
 class Contract(ContractBase):
     id: int
@@ -77,7 +79,6 @@ class ExpiryEmailCreate(ExpiryEmailBase):
 
 class ExpiryEmail(ExpiryEmailBase):
     id: int
-
 
     class Config:
         orm_mode = True
