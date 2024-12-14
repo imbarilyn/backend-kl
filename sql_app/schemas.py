@@ -25,7 +25,9 @@ class Status(int, Enum):
     active = 1
     expired = 0
 
-
+class EmailSent(int, Enum):
+    yes = 1
+    no = 0
 
 class ContractBase(BaseModel):
     contract_name: str
@@ -35,8 +37,10 @@ class ContractBase(BaseModel):
     country: Country
     vendor_name: str
     company_name: Company
-    status: str
+    status: Status
     file_upload: str
+    email_sent: EmailSent
+
 
 
 class ContractCreate(ContractBase):
