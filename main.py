@@ -123,7 +123,10 @@ def read_contract(contract_id: int, db: Session = Depends(get_db)):
 
     return {'message': 'Contract found', 'result': 'success', 'data': db_contract}
 
-
+@app.get('/uploads/{file_name}')
+def read_file(file_name: str):
+    print(f'Serving file: {file_name}')
+    return FileResponse(f'uploads/{file_name}')
 @app.get('/contracts/')
 def get_contracts(db: Session = Depends(get_db)):
     db_contracts = crud.get_contracts(db)
