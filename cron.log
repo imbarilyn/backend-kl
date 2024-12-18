@@ -1,0 +1,1607 @@
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 38, in <module>
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+  File "/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/starlette/staticfiles.py", line 56, in __init__
+    raise RuntimeError(f"Directory '{directory}' does not exist")
+RuntimeError: Directory 'uploads' does not exist
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2e518b21a0>, <sql_app.models.ExpiryEmail object at 0x7f2e518b2140>]
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+Email sent successfully
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fcb0f2c1ed0>, <sql_app.models.ExpiryEmail object at 0x7fcb0f2c1db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fc531831ed0>, <sql_app.models.ExpiryEmail object at 0x7fc531831db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f963f43ded0>, <sql_app.models.ExpiryEmail object at 0x7f963f43ddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f38df1a9ed0>, <sql_app.models.ExpiryEmail object at 0x7f38df1a9db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fbb2e30ded0>, <sql_app.models.ExpiryEmail object at 0x7fbb2e30ddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f28b1b1ded0>, <sql_app.models.ExpiryEmail object at 0x7f28b1b1ddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f833ca15ed0>, <sql_app.models.ExpiryEmail object at 0x7f833ca15db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f7fc2b3ded0>, <sql_app.models.ExpiryEmail object at 0x7f7fc2b3ddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f04f9095ed0>, <sql_app.models.ExpiryEmail object at 0x7f04f9095db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f180de29ed0>, <sql_app.models.ExpiryEmail object at 0x7f180de29db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2bc14c1ed0>, <sql_app.models.ExpiryEmail object at 0x7f2bc14c1db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fc5e1ed1ed0>, <sql_app.models.ExpiryEmail object at 0x7fc5e1ed1db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2fd5ed9ed0>, <sql_app.models.ExpiryEmail object at 0x7f2fd5ed9db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f31fa325ed0>, <sql_app.models.ExpiryEmail object at 0x7f31fa325db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fd2d1581ed0>, <sql_app.models.ExpiryEmail object at 0x7fd2d1581db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fef56c59ed0>, <sql_app.models.ExpiryEmail object at 0x7fef56c59db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fddda3e1ed0>, <sql_app.models.ExpiryEmail object at 0x7fddda3e1db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f82845a5ed0>, <sql_app.models.ExpiryEmail object at 0x7f82845a5db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f90f25eded0>, <sql_app.models.ExpiryEmail object at 0x7f90f25eddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fdd06ccded0>, <sql_app.models.ExpiryEmail object at 0x7fdd06ccddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f477b725ed0>, <sql_app.models.ExpiryEmail object at 0x7f477b725db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2c00c3ded0>, <sql_app.models.ExpiryEmail object at 0x7f2c00c3ddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f472b26ded0>, <sql_app.models.ExpiryEmail object at 0x7f472b26ddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f50cc365ed0>, <sql_app.models.ExpiryEmail object at 0x7f50cc365db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2e69d1ded0>, <sql_app.models.ExpiryEmail object at 0x7f2e69d1ddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f471a30ded0>, <sql_app.models.ExpiryEmail object at 0x7f471a30ddb0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: linahmuhonjaimbari@gmail.com password: udosrpqcfseyxfhk
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fb7f0585ed0>, <sql_app.models.ExpiryEmail object at 0x7fb7f0585db0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 274, in <module>
+    def get_contracts(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+NameError: name 'oauth2_scheme' is not defined
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 274, in <module>
+    def get_contracts(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+NameError: name 'oauth2_scheme' is not defined
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 274, in <module>
+    def get_contracts(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+NameError: name 'oauth2_scheme' is not defined
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 12, in <module>
+    from main import get_db
+  File "/home/muhonja/PycharmProjects/backend-kl/main.py", line 274, in <module>
+    def get_contracts(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+NameError: name 'oauth2_scheme' is not defined
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f3c11259c00>, <sql_app.models.ExpiryEmail object at 0x7f3c11259ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7ff57964dc00>, <sql_app.models.ExpiryEmail object at 0x7ff57964dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f94e57f9c00>, <sql_app.models.ExpiryEmail object at 0x7f94e57f9ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f3fe4341c00>, <sql_app.models.ExpiryEmail object at 0x7f3fe4341ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2305df5c00>, <sql_app.models.ExpiryEmail object at 0x7f2305df5ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7ff1e7541c00>, <sql_app.models.ExpiryEmail object at 0x7ff1e7541ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f8c34d7dc00>, <sql_app.models.ExpiryEmail object at 0x7f8c34d7dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7ff0d4259c00>, <sql_app.models.ExpiryEmail object at 0x7ff0d4259ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f246a4a1c00>, <sql_app.models.ExpiryEmail object at 0x7f246a4a1ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fcf11d85c00>, <sql_app.models.ExpiryEmail object at 0x7fcf11d85ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7facbf0c9c00>, <sql_app.models.ExpiryEmail object at 0x7facbf0c9ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f3e9778dc00>, <sql_app.models.ExpiryEmail object at 0x7f3e9778dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fcf8f4bdc00>, <sql_app.models.ExpiryEmail object at 0x7fcf8f4bdae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7ff4ac049c00>, <sql_app.models.ExpiryEmail object at 0x7ff4ac049ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f6186a69c00>, <sql_app.models.ExpiryEmail object at 0x7f6186a69ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f5965e3dc00>, <sql_app.models.ExpiryEmail object at 0x7f5965e3dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f12e63b5c00>, <sql_app.models.ExpiryEmail object at 0x7f12e63b5ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f0d7c2f1c00>, <sql_app.models.ExpiryEmail object at 0x7f0d7c2f1ae0>, <sql_app.models.ExpiryEmail object at 0x7f0d7c2f1cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f3107961c00>, <sql_app.models.ExpiryEmail object at 0x7f3107961ae0>, <sql_app.models.ExpiryEmail object at 0x7f3107961cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f9427f69cc0>, <sql_app.models.ExpiryEmail object at 0x7f9427f69c60>, <sql_app.models.ExpiryEmail object at 0x7f9427f69d80>]
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 77, in send_email_expired_contract
+    server.login(sender_email, password_email)
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 121, in <module>
+    contracts_mail_not_sent_expiry_three_months()
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 108, in contracts_mail_not_sent_expiry_three_months
+    send_email_expired_contract(
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 75, in send_email_expired_contract
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
+  File "/usr/lib/python3.10/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fa408bd1cc0>, <sql_app.models.ExpiryEmail object at 0x7fa408bd1c60>, <sql_app.models.ExpiryEmail object at 0x7fa408bd1d80>]
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 77, in send_email_expired_contract
+    server.login(sender_email, password_email)
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 121, in <module>
+    contracts_mail_not_sent_expiry_three_months()
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 108, in contracts_mail_not_sent_expiry_three_months
+    send_email_expired_contract(
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 75, in send_email_expired_contract
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
+  File "/usr/lib/python3.10/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f99598b9cc0>, <sql_app.models.ExpiryEmail object at 0x7f99598b9c60>, <sql_app.models.ExpiryEmail object at 0x7f99598b9d80>]
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 77, in send_email_expired_contract
+    server.login(sender_email, password_email)
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 121, in <module>
+    contracts_mail_not_sent_expiry_three_months()
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 108, in contracts_mail_not_sent_expiry_three_months
+    send_email_expired_contract(
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 75, in send_email_expired_contract
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
+  File "/usr/lib/python3.10/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fc1f15a1cc0>, <sql_app.models.ExpiryEmail object at 0x7fc1f15a1c60>, <sql_app.models.ExpiryEmail object at 0x7fc1f15a1d80>]
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 77, in send_email_expired_contract
+    server.login(sender_email, password_email)
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 121, in <module>
+    contracts_mail_not_sent_expiry_three_months()
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 108, in contracts_mail_not_sent_expiry_three_months
+    send_email_expired_contract(
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 75, in send_email_expired_contract
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
+  File "/usr/lib/python3.10/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f886aa11cc0>, <sql_app.models.ExpiryEmail object at 0x7f886aa11c60>, <sql_app.models.ExpiryEmail object at 0x7f886aa11d80>]
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 77, in send_email_expired_contract
+    server.login(sender_email, password_email)
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 121, in <module>
+    contracts_mail_not_sent_expiry_three_months()
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 108, in contracts_mail_not_sent_expiry_three_months
+    send_email_expired_contract(
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 75, in send_email_expired_contract
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
+  File "/usr/lib/python3.10/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f884a1a9cc0>, <sql_app.models.ExpiryEmail object at 0x7f884a1a9c60>, <sql_app.models.ExpiryEmail object at 0x7f884a1a9d80>]
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 77, in send_email_expired_contract
+    server.login(sender_email, password_email)
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 121, in <module>
+    contracts_mail_not_sent_expiry_three_months()
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 108, in contracts_mail_not_sent_expiry_three_months
+    send_email_expired_contract(
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 75, in send_email_expired_contract
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
+  File "/usr/lib/python3.10/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2e9728dcc0>, <sql_app.models.ExpiryEmail object at 0x7f2e9728dc60>, <sql_app.models.ExpiryEmail object at 0x7f2e9728dd80>]
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 77, in send_email_expired_contract
+    server.login(sender_email, password_email)
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 121, in <module>
+    contracts_mail_not_sent_expiry_three_months()
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 108, in contracts_mail_not_sent_expiry_three_months
+    send_email_expired_contract(
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 75, in send_email_expired_contract
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
+  File "/usr/lib/python3.10/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f3474675cc0>, <sql_app.models.ExpiryEmail object at 0x7f3474675c60>, <sql_app.models.ExpiryEmail object at 0x7f3474675d80>]
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 77, in send_email_expired_contract
+    server.login(sender_email, password_email)
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 652, in auth
+    authobject(challenge).encode('ascii'), eol='')
+AttributeError: 'NoneType' object has no attribute 'encode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 121, in <module>
+    contracts_mail_not_sent_expiry_three_months()
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 108, in contracts_mail_not_sent_expiry_three_months
+    send_email_expired_contract(
+  File "/home/muhonja/PycharmProjects/backend-kl/send_email.py", line 75, in send_email_expired_contract
+    with smtplib.SMTP(SMTP_SERVER, PORT) as server:
+  File "/usr/lib/python3.10/smtplib.py", line 284, in __exit__
+    raise SMTPResponseException(code, message)
+smtplib.SMTPResponseException: (334, b'UGFzc3dvcmQ6')
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f35a5941c00>, <sql_app.models.ExpiryEmail object at 0x7f35a5941ae0>, <sql_app.models.ExpiryEmail object at 0x7f35a5941cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f10eaa21c00>, <sql_app.models.ExpiryEmail object at 0x7f10eaa21ae0>, <sql_app.models.ExpiryEmail object at 0x7f10eaa21cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f1a4e869c00>, <sql_app.models.ExpiryEmail object at 0x7f1a4e869ae0>, <sql_app.models.ExpiryEmail object at 0x7f1a4e869cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f20d5c21c00>, <sql_app.models.ExpiryEmail object at 0x7f20d5c21ae0>, <sql_app.models.ExpiryEmail object at 0x7f20d5c21cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f5ed7fddc00>, <sql_app.models.ExpiryEmail object at 0x7f5ed7fddae0>, <sql_app.models.ExpiryEmail object at 0x7f5ed7fddcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7efc69db9c00>, <sql_app.models.ExpiryEmail object at 0x7efc69db9ae0>, <sql_app.models.ExpiryEmail object at 0x7efc69db9cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f3b0485dc00>, <sql_app.models.ExpiryEmail object at 0x7f3b0485dae0>, <sql_app.models.ExpiryEmail object at 0x7f3b0485dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7ff0a66c9c00>, <sql_app.models.ExpiryEmail object at 0x7ff0a66c9ae0>, <sql_app.models.ExpiryEmail object at 0x7ff0a66c9cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f50284e5c00>, <sql_app.models.ExpiryEmail object at 0x7f50284e5ae0>, <sql_app.models.ExpiryEmail object at 0x7f50284e5cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fd42cd8dc00>, <sql_app.models.ExpiryEmail object at 0x7fd42cd8dae0>, <sql_app.models.ExpiryEmail object at 0x7fd42cd8dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f1f7de0dc00>, <sql_app.models.ExpiryEmail object at 0x7f1f7de0dae0>, <sql_app.models.ExpiryEmail object at 0x7f1f7de0dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f1882715c00>, <sql_app.models.ExpiryEmail object at 0x7f1882715ae0>, <sql_app.models.ExpiryEmail object at 0x7f1882715cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f45df8f1c00>, <sql_app.models.ExpiryEmail object at 0x7f45df8f1ae0>, <sql_app.models.ExpiryEmail object at 0x7f45df8f1cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f654485dc00>, <sql_app.models.ExpiryEmail object at 0x7f654485dae0>, <sql_app.models.ExpiryEmail object at 0x7f654485dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f3445e9dc00>, <sql_app.models.ExpiryEmail object at 0x7f3445e9dae0>, <sql_app.models.ExpiryEmail object at 0x7f3445e9dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f0677479c00>, <sql_app.models.ExpiryEmail object at 0x7f0677479ae0>, <sql_app.models.ExpiryEmail object at 0x7f0677479cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fd458701c00>, <sql_app.models.ExpiryEmail object at 0x7fd458701ae0>, <sql_app.models.ExpiryEmail object at 0x7fd458701cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fc48f19dc00>, <sql_app.models.ExpiryEmail object at 0x7fc48f19dae0>, <sql_app.models.ExpiryEmail object at 0x7fc48f19dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fbcd0915c00>, <sql_app.models.ExpiryEmail object at 0x7fbcd0915ae0>, <sql_app.models.ExpiryEmail object at 0x7fbcd0915cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2ddeb4dc00>, <sql_app.models.ExpiryEmail object at 0x7f2ddeb4dae0>, <sql_app.models.ExpiryEmail object at 0x7f2ddeb4dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f25ff305c00>, <sql_app.models.ExpiryEmail object at 0x7f25ff305ae0>, <sql_app.models.ExpiryEmail object at 0x7f25ff305cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7ff7557fdc00>, <sql_app.models.ExpiryEmail object at 0x7ff7557fdae0>, <sql_app.models.ExpiryEmail object at 0x7ff7557fdcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fcfe354dc00>, <sql_app.models.ExpiryEmail object at 0x7fcfe354dae0>, <sql_app.models.ExpiryEmail object at 0x7fcfe354dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fd8dc0bdc00>, <sql_app.models.ExpiryEmail object at 0x7fd8dc0bdae0>, <sql_app.models.ExpiryEmail object at 0x7fd8dc0bdcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7febc936dc00>, <sql_app.models.ExpiryEmail object at 0x7febc936dae0>, <sql_app.models.ExpiryEmail object at 0x7febc936dcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7febe0c15c00>, <sql_app.models.ExpiryEmail object at 0x7febe0c15ae0>, <sql_app.models.ExpiryEmail object at 0x7febe0c15cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f52f5f49c00>, <sql_app.models.ExpiryEmail object at 0x7f52f5f49ae0>, <sql_app.models.ExpiryEmail object at 0x7f52f5f49cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f5bdbcedc00>, <sql_app.models.ExpiryEmail object at 0x7f5bdbcedae0>, <sql_app.models.ExpiryEmail object at 0x7f5bdbcedcc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f210e079c00>, <sql_app.models.ExpiryEmail object at 0x7f210e079ae0>, <sql_app.models.ExpiryEmail object at 0x7f210e079cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fbe68591c00>, <sql_app.models.ExpiryEmail object at 0x7fbe68591ae0>, <sql_app.models.ExpiryEmail object at 0x7fbe68591cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fa67bf29c00>, <sql_app.models.ExpiryEmail object at 0x7fa67bf29ae0>, <sql_app.models.ExpiryEmail object at 0x7fa67bf29cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7ff445815c00>, <sql_app.models.ExpiryEmail object at 0x7ff445815ae0>, <sql_app.models.ExpiryEmail object at 0x7ff445815cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fb46a871c00>, <sql_app.models.ExpiryEmail object at 0x7fb46a871ae0>, <sql_app.models.ExpiryEmail object at 0x7fb46a871cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fe3175f5c00>, <sql_app.models.ExpiryEmail object at 0x7fe3175f5ae0>, <sql_app.models.ExpiryEmail object at 0x7fe3175f5cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7facec665c00>, <sql_app.models.ExpiryEmail object at 0x7facec665ae0>, <sql_app.models.ExpiryEmail object at 0x7facec665cc0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f56c9695c00>, <sql_app.models.ExpiryEmail object at 0x7f56c9695ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f1d2ae2dc00>, <sql_app.models.ExpiryEmail object at 0x7f1d2ae2dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f02a6f8dc00>, <sql_app.models.ExpiryEmail object at 0x7f02a6f8dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f23920ddc00>, <sql_app.models.ExpiryEmail object at 0x7f23920ddae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f6b2428dc00>, <sql_app.models.ExpiryEmail object at 0x7f6b2428dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7feffe5f5c00>, <sql_app.models.ExpiryEmail object at 0x7feffe5f5ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fa14180dc00>, <sql_app.models.ExpiryEmail object at 0x7fa14180dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f63c7aa9c00>, <sql_app.models.ExpiryEmail object at 0x7f63c7aa9ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f5590375c00>, <sql_app.models.ExpiryEmail object at 0x7f5590375ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f5030449c00>, <sql_app.models.ExpiryEmail object at 0x7f5030449ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f1d4b85dc00>, <sql_app.models.ExpiryEmail object at 0x7f1d4b85dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f9b03dadc00>, <sql_app.models.ExpiryEmail object at 0x7f9b03dadae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f3021c7dc00>, <sql_app.models.ExpiryEmail object at 0x7f3021c7dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f05e8291c00>, <sql_app.models.ExpiryEmail object at 0x7f05e8291ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f55fd37dc00>, <sql_app.models.ExpiryEmail object at 0x7f55fd37dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f83ec285c00>, <sql_app.models.ExpiryEmail object at 0x7f83ec285ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f1d40bd5c00>, <sql_app.models.ExpiryEmail object at 0x7f1d40bd5ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f22ad2b9c00>, <sql_app.models.ExpiryEmail object at 0x7f22ad2b9ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fdafe661c00>, <sql_app.models.ExpiryEmail object at 0x7fdafe661ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2f0dba5c00>, <sql_app.models.ExpiryEmail object at 0x7f2f0dba5ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f521c519c00>, <sql_app.models.ExpiryEmail object at 0x7f521c519ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2258dedc00>, <sql_app.models.ExpiryEmail object at 0x7f2258dedae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f0d89019c00>, <sql_app.models.ExpiryEmail object at 0x7f0d89019ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f065e4e1c00>, <sql_app.models.ExpiryEmail object at 0x7f065e4e1ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fe533c65c00>, <sql_app.models.ExpiryEmail object at 0x7fe533c65ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f76a0825c00>, <sql_app.models.ExpiryEmail object at 0x7f76a0825ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2766659c00>, <sql_app.models.ExpiryEmail object at 0x7f2766659ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f4938941c00>, <sql_app.models.ExpiryEmail object at 0x7f4938941ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fb27136dc00>, <sql_app.models.ExpiryEmail object at 0x7fb27136dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f41d55f1c00>, <sql_app.models.ExpiryEmail object at 0x7f41d55f1ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fd86b3e1c00>, <sql_app.models.ExpiryEmail object at 0x7fd86b3e1ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f8f52735c00>, <sql_app.models.ExpiryEmail object at 0x7f8f52735ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fed6219dc00>, <sql_app.models.ExpiryEmail object at 0x7fed6219dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f0a54a39c00>, <sql_app.models.ExpiryEmail object at 0x7f0a54a39ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7faff76f5c00>, <sql_app.models.ExpiryEmail object at 0x7faff76f5ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f1396ac5c00>, <sql_app.models.ExpiryEmail object at 0x7f1396ac5ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f4f10069c00>, <sql_app.models.ExpiryEmail object at 0x7f4f10069ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f8bf6bfdc00>, <sql_app.models.ExpiryEmail object at 0x7f8bf6bfdae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f9e4b7bdc00>, <sql_app.models.ExpiryEmail object at 0x7f9e4b7bdae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fc548f4dc00>, <sql_app.models.ExpiryEmail object at 0x7fc548f4dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f99399edc00>, <sql_app.models.ExpiryEmail object at 0x7f99399edae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f949c969c00>, <sql_app.models.ExpiryEmail object at 0x7f949c969ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f8e05011c00>, <sql_app.models.ExpiryEmail object at 0x7f8e05011ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f635a6d9c00>, <sql_app.models.ExpiryEmail object at 0x7f635a6d9ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f295d925c00>, <sql_app.models.ExpiryEmail object at 0x7f295d925ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fd0537c5c00>, <sql_app.models.ExpiryEmail object at 0x7fd0537c5ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f2465da9c00>, <sql_app.models.ExpiryEmail object at 0x7f2465da9ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fe012d65c00>, <sql_app.models.ExpiryEmail object at 0x7fe012d65ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f00d9715c00>, <sql_app.models.ExpiryEmail object at 0x7f00d9715ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f1752299c00>, <sql_app.models.ExpiryEmail object at 0x7f1752299ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fa175a9dc00>, <sql_app.models.ExpiryEmail object at 0x7fa175a9dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fb240055c00>, <sql_app.models.ExpiryEmail object at 0x7fb240055ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f823fe8dc00>, <sql_app.models.ExpiryEmail object at 0x7f823fe8dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fc4d4f31c00>, <sql_app.models.ExpiryEmail object at 0x7fc4d4f31ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f98371adc00>, <sql_app.models.ExpiryEmail object at 0x7f98371adae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fa270d0dc00>, <sql_app.models.ExpiryEmail object at 0x7fa270d0dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fbc1f63dc00>, <sql_app.models.ExpiryEmail object at 0x7fbc1f63dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f907562dc00>, <sql_app.models.ExpiryEmail object at 0x7f907562dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7fd465655c00>, <sql_app.models.ExpiryEmail object at 0x7fd465655ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f35b21e1c00>, <sql_app.models.ExpiryEmail object at 0x7f35b21e1ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f03ae45dc00>, <sql_app.models.ExpiryEmail object at 0x7f03ae45dae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f628c171c00>, <sql_app.models.ExpiryEmail object at 0x7f628c171ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f036d525c00>, <sql_app.models.ExpiryEmail object at 0x7f036d525ae0>]
+No contracts to send mails to
+/home/muhonja/PycharmProjects/backend-kl/.venv/lib/python3.10/site-packages/pydantic/_internal/_config.py:341: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+email-address: None password: None
+We are running a cron job
+[<sql_app.models.ExpiryEmail object at 0x7f37708a9c00>, <sql_app.models.ExpiryEmail object at 0x7f37708a9ae0>]
+No contracts to send mails to
