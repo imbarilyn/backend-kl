@@ -1,23 +1,41 @@
-from fastapi import FastAPI, Depends, HTTPException, File, UploadFile, Form
-from datetime import date
+from dotenv import load_dotenv
+from fastapi import FastAPI, Depends, status, HTTPException, File, UploadFile, Form
+from datetime import date, timedelta, timezone, datetime
 from sqlalchemy.orm import Session
 from secrets import token_hex
 import os
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-
 import sql_app.schemas
 from sql_app import models, schemas, crud
 from sql_app.database import SessionLocal, engine
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
-from typing import ClassVar
+import jwt
+from jwt.exceptions import  InvalidTokenError
+from passlib.context import CryptContext
+from pathlib import Path
+from dotenv import load_dotenv
+
+
+current_dir = Path(__file__).resolve().parent if '__file__' in locals() else Path.cwd()
+env_directory = current_dir / '.env'
+#
+load_dotenv(env_directory)
+SECRET_KEY=os.getenv('SECRET_KEY')
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 
 models.Base.metadata.create_all(bind=engine)
 app = FastAPI()
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl='token')
+pwd_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
+
+if __name__ == '__main__':
 # Mount upload directory as  static files
-app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
+    app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
 
 origins = [
     'http://localhost:5173'
@@ -31,8 +49,7 @@ app.add_middleware(
     allow_headers=['*']
 )
 
-
-# Dependency
+# Dependency it is a
 def get_db():
     db = SessionLocal()
     try:
@@ -40,6 +57,23 @@ def get_db():
     finally:
         db.close()
 
+
+fake_users_db = {
+    "johndoe": {
+        "username": "johndoe",
+        "full_name": "John Doe",
+        "email": "johndoe@example.com",
+        "hashed_password": "fakehashedsecret",
+        "disabled": False,
+    },
+    "alice": {
+        "username": "alice",
+        "full_name": "Alice Wonderson",
+        "email": "alice@example.com",
+        "hashed_password": "fakehashedsecret2",
+        "disabled": True,
+    },
+}
 
 
 
@@ -58,6 +92,112 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail='User not found')
     return db_user
 
+# # Pydantic model in the token endpoint fro the response purpose
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class TokenData(BaseModel):
+    username: str | None = None
+
+
+class User(BaseModel):
+    username: str
+    email: str | None = None
+    full_name: str | None = None
+    disabled: bool | None = None
+
+
+class UserInDB(User):
+    hashed_password: str
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
+
+def get_password_hash(password):
+    return pwd_context.hash(password)
+
+def get_user(db, username: str):
+    print(f"the username is {username}")
+    if username in db:
+        user_dict = db[username]
+        return UserInDB(**user_dict)
+
+def authenticate_user(fake_db, username: str, password: str):
+    user = get_user(fake_db, username)
+    if not user:
+        return False
+    if not verify_password(password, user.hashed_password):
+        return False
+    return user
+
+# Utility function for generating new access token
+def create_access_token(data: dict, expires_delta: timedelta | None = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expire = datetime.now(timezone.utc) + expires_delta
+    else:
+        expire = datetime.now(timezone.utc) + timedelta(minutes=15)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+async def get_current_user(token: str = Depends(oauth2_scheme)):
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail='Could not validate credentials',
+        headers={'WWW-Authenticate': 'Bearer'}
+    )
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        username:  str = payload.get('sub')
+        if username is None:
+            raise credentials_exception
+        # instance of user created for safety purpose
+        token_data = TokenData(username=username)
+    except InvalidTokenError:
+        raise credentials_exception
+    user = get_user(fake_users_db, username=token_data.username)
+    if user is None:
+        raise credentials_exception
+    return user
+
+
+async def get_current_active_user(current_user: User = Depends(get_current_user)):
+    if current_user.disabled:
+        raise HTTPException(status_code=400, detail="Inactive user")
+    return current_user
+
+@app.post("/token")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    user_dict = fake_users_db.get(form_data.username)
+    if not user_dict:
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
+    user = UserInDB(**user_dict)
+    hashed_password = fake_hash_password(form_data.password)
+    if not hashed_password == user.hashed_password:
+        raise HTTPException(status_code=400, detail="Incorrect username or password")
+
+    return {"access_token": user.username, "token_type": "bearer"}
+
+@app.get("/users/me")
+async def read_users_me(current_user: User = Depends(get_current_active_user)):
+    return current_user
+
+
+def fake_hash_password(password: str):
+    return "fakehashed" + password
+
+def fake_decode_token(token):
+    # This doesn't provide any security at all
+    # Check the next version
+    print(f"the token is {token}")
+    user = get_user(fake_users_db, token)
+    return user
+#
+# @app.get("/users")
+# async def read_me():
+#     return {"msg": "Hello World"}
 
 @app.post('/add-contracts')
 async def create_contract(
@@ -69,7 +209,9 @@ async def create_contract(
         vendor_name: str = Form(...),
         company_name: schemas.Company = Form(...),
         file: UploadFile = File(...),
-        db: Session = Depends(get_db)):
+        db: Session = Depends(get_db),
+
+):
     required_ext = {'pdf'}
     print(f"{contract_name}")
     db_contract = crud.get_contract_by_name(db=db, contract_name=contract_name)
@@ -77,7 +219,6 @@ async def create_contract(
         print(f"the contract exists {db_contract}")
         return {'message': 'Contract already exists', 'result': 'fail'}
         # raise HTTPException(status_code=400, detail='Contract already exists')
-
 
     if db_contract is None:
         print(f"The contract does not exist yet {db_contract}")
@@ -92,7 +233,7 @@ async def create_contract(
             os.makedirs('uploads', exist_ok=True)
             file_path = os.path.join('uploads', f"{file_name}.{file_ext}")
             file_name_server = f"{file_name}.{file_ext}"
-             # the  f is an object created once the file is open
+            # the  f is an object created once the file is open
             # we use 'wb' format tto write binary data to file for it may content images or pdfs
             with open(file_path, 'wb') as f:
                 content = await file.read()
@@ -122,12 +263,15 @@ def read_contract(contract_id: int, db: Session = Depends(get_db)):
 
     return {'message': 'Contract found', 'result': 'success', 'data': db_contract}
 
+
 @app.get('/uploads/{file_name}')
 def read_file(file_name: str):
     print(f'Serving file: {file_name}')
     return FileResponse(f'uploads/{file_name}')
+
+
 @app.get('/contracts/')
-def get_contracts(db: Session = Depends(get_db)):
+def get_contracts(db: Session = Depends(get_db), token: str = Depends(get_db)):
     db_contracts = crud.get_contracts(db)
     # db_contracts = db.query(models.Contract).all()
     # print(db_contracts[0].status)
@@ -151,7 +295,7 @@ def update_contract(contract_id: int, contract: schemas.Contract, db: Session = 
     db_contract = crud.get_contract(db, contract_id)
     if db_contract is None:
         # raise HTTPException(status_code=404, detail='Contract not found')
-        return{'message': 'Contract not found', 'result': 'fail'}
+        return {'message': 'Contract not found', 'result': 'fail'}
     return crud.update_contract(db, contract)
 
 
@@ -166,11 +310,13 @@ def add_email(email: sql_app.schemas.ExpiryEmailBase, db: Session = Depends(get_
         return {'message': 'Email already exists', 'result': 'fail'}
     return crud.add_email(db, email)
 
+
 @app.get('/emails/')
 def get_emails(db: Session = Depends(get_db)):
     emails = crud.get_emails(db)
     print(emails)
     return emails
+
 
 @app.delete('/delete-email/{email_id}')
 def delete_email(email_id: int, db: Session = Depends(get_db)):
@@ -179,14 +325,14 @@ def delete_email(email_id: int, db: Session = Depends(get_db)):
         return {'message': 'Email not found', 'result': 'fail'}
     return crud.delete_email(email_id, db)
 
-@app.put('/update-email/{email_id}')
-def update_email(email_id: int, email: sql_app.schemas.ExpiryEmail,  db: Session = Depends(get_db)):
-   email_db = crud.get_email(email_id, db)
-   print(f"Email--: {email}")
-   if email_db:
-       print(f'{email_db}')
-       return crud.update_email(email, db)
-   return {'message': 'Email not found', 'result': 'fail'}
 
+@app.put('/update-email/{email_id}')
+def update_email(email_id: int, email: sql_app.schemas.ExpiryEmail, db: Session = Depends(get_db)):
+    email_db = crud.get_email(email_id, db)
+    print(f"Email--: {email}")
+    if email_db:
+        print(f'{email_db}')
+        return crud.update_email(email, db)
+    return {'message': 'Email not found', 'result': 'fail'}
 
 
