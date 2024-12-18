@@ -37,3 +37,8 @@ uvicorn==0.30.6
 uvloop==0.20.0
 watchfiles==0.24.0
 websockets==13.0.1
+
+alembic~=1.13.3
+PyJWT~=2.10.1
+passlib~=1.7.4
+bcrypt~=4.2.0
