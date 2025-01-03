@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <object-set>
+    <table path="KlContract.users">
+      <column expr=""/>
+    </table>
+  </object-set>
+</data>

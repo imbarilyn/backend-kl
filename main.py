@@ -58,23 +58,31 @@ def get_db():
         db.close()
 
 
+# fake_users_db = {
+#     "johndoe": {
+#         "username": "johndoe",
+#         "full_name": "John Doe",
+#         "email": "johndoe@example.com",
+#         "hashed_password": "fakehashedsecret",
+#         "disabled": False,
+#     },
+#     "alice": {
+#         "username": "alice",
+#         "full_name": "Alice Wonderson",
+#         "email": "alice@example.com",
+#         "hashed_password": "fakehashedsecret2",
+#         "disabled": True,
+#     },
+# }
 fake_users_db = {
     "johndoe": {
         "username": "johndoe",
         "full_name": "John Doe",
         "email": "johndoe@example.com",
-        "hashed_password": "fakehashedsecret",
+        "hashed_password": "$2b$12$EixZaYVK1fsbw1ZfbX3OXePaWxn96p36WQoeG6Lruj3vjPGga31lW",
         "disabled": False,
-    },
-    "alice": {
-        "username": "alice",
-        "full_name": "Alice Wonderson",
-        "email": "alice@example.com",
-        "hashed_password": "fakehashedsecret2",
-        "disabled": True,
-    },
+    }
 }
-
 
 
 @app.post('/users/', response_model=schemas.User)
@@ -85,12 +93,12 @@ def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     return crud.create_user(db=db, user=user)
 
 
-@app.get('/users/{user_id}', response_model=schemas.User)
-def read_user(user_id: int, db: Session = Depends(get_db)):
-    db_user = crud.get_user(db, user_id=user_id)
-    if db_user is None:
-        raise HTTPException(status_code=404, detail='User not found')
-    return db_user
+# @app.get('/users/{user_id}', response_model=schemas.User)
+# def read_user(user_id: int, db: Session = Depends(get_db)):
+#     db_user = crud.get_user(db, user_id=user_id)
+#     if db_user is None:
+#         raise HTTPException(status_code=404, detail='User not found')
+#     return db_user
 
 # # Pydantic model in the token endpoint fro the response purpose
 class Token(BaseModel):
@@ -118,13 +126,15 @@ def get_password_hash(password):
     return pwd_context.hash(password)
 
 def get_user(db, username: str):
-    print(f"the username is {username}")
     if username in db:
         user_dict = db[username]
-        return UserInDB(**user_dict)
+        print(f"user in db {user_dict}")
+        # return UserInDB(**user_dict)
+        return User(**user_dict)
 
 def authenticate_user(fake_db, username: str, password: str):
     user = get_user(fake_db, username)
+    print(f"user in db {user}")
     if not user:
         return False
     if not verify_password(password, user.hashed_password):
@@ -169,16 +179,21 @@ async def get_current_active_user(current_user: User = Depends(get_current_user)
     return current_user
 
 @app.post("/token")
-async def login(form_data: OAuth2PasswordRequestForm = Depends()):
-    user_dict = fake_users_db.get(form_data.username)
-    if not user_dict:
-        raise HTTPException(status_code=400, detail="Incorrect username or password")
-    user = UserInDB(**user_dict)
-    hashed_password = fake_hash_password(form_data.password)
-    if not hashed_password == user.hashed_password:
-        raise HTTPException(status_code=400, detail="Incorrect username or password")
-
-    return {"access_token": user.username, "token_type": "bearer"}
+async def login_for_access_token(
+    form_data: OAuth2PasswordRequestForm = Depends(),
+) -> Token:
+    user = authenticate_user(fake_users_db, form_data.username, form_data.password)
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(
+        data={"sub": user.username}, expires_delta=access_token_expires
+    )
+    return Token(access_token=access_token, token_type="bearer")
 
 @app.get("/users/me")
 async def read_users_me(current_user: User = Depends(get_current_active_user)):
