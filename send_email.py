@@ -19,7 +19,7 @@ SMTP_SERVER = 'smtp.gmail.com'
 
 # Trying to get the current directory to load the environment variables
 # The script below works for both file-based or interactive python sessions like REPL
-current_dir = Path(__file__).resolve().parent if '__fi*.pyle__' in locals() else Path.cwd()
+current_dir = Path(__file__).resolve().parent if '__file__' in locals() else Path.cwd()
 env_directory = current_dir / '.env'
 
 # Now let's load the environment variables to get the email credentials
