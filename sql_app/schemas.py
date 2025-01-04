@@ -67,6 +67,9 @@ class UserCreate(UserBase):
 class User(UserBase):
     id: int
     email:str
+    username: str
+    hashed_password: str
+
 
     class Config:
         orm_mode = True
