@@ -17,6 +17,8 @@ from jwt.exceptions import  InvalidTokenError
 from passlib.context import CryptContext
 from pathlib import Path
 from dotenv import load_dotenv
+import auth
+from auth import get_current_active_user
 
 
 current_dir = Path(__file__).resolve().parent if '__file__' in locals() else Path.cwd()
