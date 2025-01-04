@@ -35,6 +35,19 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl='auth/token')
 
 
 
+@router.post("/token", response_model=Token)
+def login_for_access_token(form_data: OAuth2PasswordRequestFormWithEmail = Depends(), db: Session=Depends(get_db)):
+    print(f"form data {form_data.email}")
+    user = authenticate_user(db, form_data.username, form_data.password)
+    if not user:
+        raise  HTTPException (
+            status_code= status.HTTP_401_UNAUTHORIZED,
+            detail='Wrong credentials',
+            headers={"WWW-authorization": 'Bearer'}
+        )
+    access_token_expires = timedelta(minutes = ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(data={"sub": form_data.username, "user_id": user.id, "email": user.email}, expires_delta=access_token_expires)
+    return Token(access_token=access_token, token_type='bearer')
 
 
 
