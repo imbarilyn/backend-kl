@@ -22,12 +22,58 @@ router = APIRouter(
     tags=['auth']
 )
 
+
 current_dir = Path(__file__).resolve().parent if __file__ in locals() else Path.cwd()
 env_directory = current_dir  / '.env'
-SECRET_KEY = os.getenv('SECRET_KEY')
-ALGORITH='HS256'
+load_dotenv(env_directory)
 bcrypt_context = CryptContext(schemes=['bcrypt'], deprecated='auto')
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='auth/token')
+
+
+SECRET_KEY = os.getenv('SECRET_KEY')
+ALGORITH= os.getenv('ALGORITHM')
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+def get_db():
+    db=SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+# get_db dependency injection
+# db_dependency= Session = Depends(get_db)
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+class Users(BaseModel):
+    username: str
+    hashed_password: str
+
+# custom OAuth2PasswordRequestForm to include email
+class OAuth2PasswordRequestFormWithEmail(OAuth2PasswordRequestForm):
+    def __init__(self,
+                 username: str = Form(...),
+                 password: str = Form(...),
+                 email: str = Form(...)
+                 ):
+        super().__init__(username=username, password=password)
+        self.email = email
+
+def get_hashed_password(password: str):
+    return bcrypt_context.hash(password)
+
+def verify_password(plain_password: str, hashed_password: str):
+    print(bcrypt_context.verify(plain_password, hashed_password))
+    return bcrypt_context.verify(plain_password, hashed_password)
+
+def get_user(db: Session, username: str):
+    # if username in db:
+    #     user_dict = db['username']
+    #     return schemas.UserCreate(**user_dict)
+    return db.query(models.User).filter(models.User.username == username).first()
 
 
 
