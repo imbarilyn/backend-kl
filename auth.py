@@ -95,6 +95,23 @@ def create_access_token(data: dict, expires_delta: timedelta | None = None):
     jwt_encoded = jwt.encode(to_encode, SECRET_KEY, ALGORITH)
     return jwt_encoded
 
+def get_current_active_user(token: str =  Depends(oauth2_scheme)):
+    credential_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail='Could not validate credentials',
+        headers = {'WWW-Authenticate': 'Bearer'}
+    )
+    try:
+        payload = jwt.decode(token, SECRET_KEY, ALGORITH)
+        username: str = payload.get('sub')
+        user_id: int = payload.get('user_id')
+        exp: str = payload.get('exp')
+        email: str = payload.get('email')
+        if username is None or user_id is None:
+            raise credential_exception
+        return {'username': username, 'user_id': user_id, 'exp': exp, 'email': email}
+    except InvalidTokenError:
+        raise credential_exception
 
 
 @router.post("/token", response_model=Token)
