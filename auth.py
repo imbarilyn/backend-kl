@@ -77,6 +77,14 @@ def get_user(db: Session, username: str):
 
 
 
+def authenticate_user(db: Session, username: str, password: str):
+    user = get_user(db, username)
+    print(f"user hashed password {user.hashed_password}")
+    if not user:
+        return  False
+    if not verify_password(password, user.hashed_password):
+        return  False
+    return user
 
 
 
