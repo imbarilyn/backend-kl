@@ -8,12 +8,13 @@ from typing_extensions import deprecated
 
 from sql_app import schemas, models
 from jwt.exceptions import InvalidTokenError
-from datetime import timedelta, datetime
-from fastapi import Depends, status, HTTPException,APIRouter
+from datetime import timedelta, datetime, timezone
+from fastapi import Depends, status, HTTPException,APIRouter, Form
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from sql_app.database import  SessionLocal, engine
 from pathlib import Path
+from dotenv import load_dotenv
 
 
 router = APIRouter(
@@ -150,21 +151,15 @@ def login_for_access_token(form_data: OAuth2PasswordRequestFormWithEmail = Depen
 
 
 
-# models.Base.metadata.create_all(bind=engine)
-#
-# oauth2_scheme=OAuth2PasswordBearer(tokenUrl='token')
-# pwd_context=CryptContext(schemes=['bcrypt'], deprecated='auto')
-#
-#
-# def get_db():
-#     db=SessionLocal()
-#     try:
-#         yield db
-#     finally:
-#         db.close()
-#
-#
-# app=FastAPI()
-#
-# @app.post("/token")
-# async  def
+
+
+
+
+
+
+
+
+
+
+
+
