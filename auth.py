@@ -6,7 +6,6 @@ import jwt
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from typing_extensions import deprecated
 
-from main import current_dir, env_directory, SECRET_KEY
 from sql_app import schemas, models
 from jwt.exceptions import InvalidTokenError
 from datetime import timedelta, datetime
@@ -86,6 +85,15 @@ def authenticate_user(db: Session, username: str, password: str):
         return  False
     return user
 
+def create_access_token(data: dict, expires_delta: timedelta | None = None):
+    to_encode = data.copy()
+    if expires_delta:
+        expires_in = datetime.now(timezone.utc) + expires_delta
+    else:
+        expires_in = datetime.now(timezone.utc) + timedelta(minutes=15)
+    to_encode.update({"exp": expires_in})
+    jwt_encoded = jwt.encode(to_encode, SECRET_KEY, ALGORITH)
+    return jwt_encoded
 
 
 
