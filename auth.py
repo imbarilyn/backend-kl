@@ -113,6 +113,24 @@ def get_current_active_user(token: str =  Depends(oauth2_scheme)):
     except InvalidTokenError:
         raise credential_exception
 
+@router.post("/", status_code=status.HTTP_201_CREATED, response_model=schemas.User)
+async def create_user( create_user_request: schemas.UserCreate, db: Session = Depends(get_db),):
+    user_in_db = get_user(db, create_user_request.username)
+    if user_in_db:
+        raise HTTPException (
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail='Username taken',
+        )
+    else:
+        # create a user model instance
+        create_user_model = models.User(
+            username=create_user_request.username,
+            email=create_user_request.email,
+            hashed_password=get_hashed_password(create_user_request.password)
+        )
+        db.add(create_user_model)
+        db.commit()
+        return create_user_model
 
 @router.post("/token", response_model=Token)
 def login_for_access_token(form_data: OAuth2PasswordRequestFormWithEmail = Depends(), db: Session=Depends(get_db)):
