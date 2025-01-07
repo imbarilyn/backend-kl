@@ -301,10 +301,6 @@ def read_file(file_name: str):
 @app.get('/contracts/')
 def get_contracts(db: Session = Depends(get_db), token: str = Depends(get_db)):
     db_contracts = crud.get_contracts(db)
-    # db_contracts = db.query(models.Contract).all()
-    # print(db_contracts[0].status)
-    for contract in db_contracts['contracts']:
-        print(contract.email_sent)
     return db_contracts
 
 

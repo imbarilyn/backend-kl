@@ -5,6 +5,7 @@ from . import models, schemas
 from fastapi.encoders import jsonable_encoder
 import bcrypt
 from sqlalchemy.exc import SQLAlchemyError
+from datetime import datetime
 
 
 # Get user by user_id
@@ -59,6 +60,22 @@ def get_contracts(db: Session):
         'result': 'fail',
         'contracts': []
     }
+
+def expired_contracts(db: Session):
+    today = datetime.now()
+    contracts = db.query(models.Contract).filter(
+        models.Contract.end_date >= today.strftime('%d-%m-%Y')
+    ).all()
+    if contracts:
+        return {
+            'result': 'success',
+            'contracts': contracts
+        }
+    return {
+        'result': 'success',
+        'contracts': []
+    }
+
 
 
 def create_contract(db: Session, contract: schemas.ContractCreate):
