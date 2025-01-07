@@ -308,6 +308,12 @@ def get_contracts(db: Session = Depends(get_db), token: str = Depends(get_db)):
     return db_contracts
 
 
+@app.get('/expired-contracts')
+def get_expired_contracts(db: Session = Depends(get_db)):
+ expired_contracts = crud.expired_contracts(db)
+ return expired_contracts
+
+
 @app.delete('/delete-contract/{contract_id}')
 def delete_contract(contract_id: int, db: Session = Depends(get_db)):
     db_contract = crud.get_contract(db, contract_id)
