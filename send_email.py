@@ -129,11 +129,6 @@ def get_db():
         db_session.close()
 
 
-contracts_mail_not_sent_expiry_three_months()
-# get_emails()
-#
-# if __name__ == '__main__':
-#     contracts_mail_not_sent_expiry_three_months()
-#     get_emails()
-#     print('We are running a cron job')
-#     print('Emails sent successfully')
+with get_db() as database_session:
+    contracts_mail_not_sent_expiry_three_months(database_session)
+    print("Status changed successfully")
