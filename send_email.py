@@ -9,9 +9,8 @@ from sqlalchemy.orm import Session
 from datetime import datetime, timedelta
 from sqlalchemy import and_
 from sql_app import models, schemas
-from main import get_db
-from fastapi import FastAPI
-# Email server details
+from contextlib import contextmanager
+from sql_app.database import SessionLocal
 
 
 PORT = 587
@@ -116,6 +115,18 @@ def contracts_mail_not_sent_expiry_three_months():
                 db.commit()
     print('No contracts to send mails to')
 
+
+@contextmanager
+def get_db():
+    db_session = SessionLocal()
+    try:
+        yield db_session
+        db_session.commit()
+    except Exception:
+        db_session.rollback()
+        raise
+    finally:
+        db_session.close()
 
 
 contracts_mail_not_sent_expiry_three_months()
