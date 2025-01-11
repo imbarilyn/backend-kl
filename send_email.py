@@ -92,7 +92,6 @@ def contracts_mail_not_sent_expiry_three_months(db: Session):
     print('We are running a cron job')
     today = datetime.now()
     threshold_date = today + timedelta(days=90)
-    db: Session= next(get_db())
     contracts = db.query(models.Contract).filter(
         and_(
             models.Contract.status == 1,
