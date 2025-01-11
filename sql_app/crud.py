@@ -62,17 +62,16 @@ def get_contracts(db: Session):
     }
 
 def expired_contracts(db: Session):
-    today = datetime.now()
-    contracts = db.query(models.Contract).filter(
-        models.Contract.end_date >= today.strftime('%d-%m-%Y')
-    ).all()
-    if contracts:
+    today = date.today()
+    exp_contracts = db.query(models.Contract).filter(
+        models.Contract.end_date <= today.strftime('%Y-%m-%d')).all()
+    if exp_contracts:
         return {
             'result': 'success',
-            'contracts': contracts
+            'contracts': exp_contracts
         }
     return {
-        'result': 'success',
+        'result': 'fail',
         'contracts': []
     }
 
