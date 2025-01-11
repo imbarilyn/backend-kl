@@ -5,7 +5,7 @@ from . import models, schemas
 from fastapi.encoders import jsonable_encoder
 import bcrypt
 from sqlalchemy.exc import SQLAlchemyError
-from datetime import datetime
+from datetime import datetime, date
 
 
 # Get user by user_id
