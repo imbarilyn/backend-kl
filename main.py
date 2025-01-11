@@ -1,6 +1,4 @@
-from dotenv import load_dotenv
-from fastapi import FastAPI, Depends, status, HTTPException, File, UploadFile, Form
-from datetime import date, timedelta, timezone, datetime
+from fastapi import FastAPI, Depends, HTTPException, File, UploadFile, Form
 from sqlalchemy.orm import Session
 from secrets import token_hex
 import os
@@ -8,17 +6,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import sql_app.schemas
-from sql_app import models, schemas, crud
+from sql_app import models, schemas, crud, auth
 from sql_app.database import SessionLocal, engine
-from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from pydantic import BaseModel
-import jwt
-from jwt.exceptions import  InvalidTokenError
+from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
 from pathlib import Path
 from dotenv import load_dotenv
-import auth
-from auth import get_current_active_user
+from sql_app.auth import get_current_active_user
 
 
 current_dir = Path(__file__).resolve().parent if '__file__' in locals() else Path.cwd()
