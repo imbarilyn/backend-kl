@@ -2,6 +2,7 @@ from datetime import datetime, date
 from email.policy import default
 from enum import Enum
 from pydantic import BaseModel, Field
+from typing import Optional
 
 
 class Country(str, Enum):
@@ -66,15 +67,18 @@ class UserCreate(UserBase):
 
 class User(UserBase):
     id: int
-    email:str
-    username: str
     hashed_password: str
-
+    reset_token_expiry: Optional[datetime] = None
+    reset_token: Optional[str] = None
+    used_reset_token: Optional[int] = UsedToken.no.value
+    # linah.imbari@student.moringaschool.com
 
     class Config:
         orm_mode = True
 
 
+class ExpiryEmailBase(BaseModel):
+    email: str
 class ExpiryEmailBase(BaseModel):
     email: str
 
