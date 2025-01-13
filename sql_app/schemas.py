@@ -31,6 +31,10 @@ class EmailSent(int, Enum):
     yes = 1
     no = 0
 
+class UsedToken(int, Enum):
+    yes = 1
+    no = 0
+
 class ContractBase(BaseModel):
     contract_name: str
     category: str
@@ -61,6 +65,7 @@ class Contract(ContractBase):
 class UserBase(BaseModel):
     email: str
     username: str
+
 
 class UserCreate(UserBase):
     password: str
