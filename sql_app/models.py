@@ -11,9 +11,12 @@ class User(Base):
     __tablename__ = 'users'
 
     id=Column(Integer, primary_key=True)
-    email=Column(String(60), unique=True, index=True)
-    username=Column(String(60), unique=True, index=True)
+    email=Column(String(60), unique=True, index=True, nullable=False)
+    username=Column(String(60), unique=True, index=True, nullable=False)
     hashed_password=Column(String(60))
+    reset_token=Column(String(60), nullable=True)
+    reset_token_expiry=Column(DateTime, nullable=True)
+    used_reset_token=Column(Integer,  nullable=True)
 
 
 #

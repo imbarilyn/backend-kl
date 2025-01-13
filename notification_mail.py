@@ -30,7 +30,6 @@ sender_email = os.getenv('SENDER_EMAIL')
 password_email = os.getenv('EMAIL_PASSWORD')
 receiver = os.getenv('RECEIVER_EMAIL')
 
-print(f'email-address: {sender_email} password: {password_email}')
 
 
 # Now writing the function for sending emails
