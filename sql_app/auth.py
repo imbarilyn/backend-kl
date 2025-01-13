@@ -54,6 +54,29 @@ class Users(BaseModel):
     username: str
     hashed_password: str
 
+class ForgottenPassword(BaseModel):
+    email: str
+    username: str
+
+# class ResetPassword(ForgottenPassword):
+#     def __init__(self,
+#                  username: str = Form(...),
+#                     email: str = Form(...),
+#                     password: str = Form(...),
+#                  confirm_password: str = Form(...),
+#                  token: str = Form(...)
+#                  ):
+#         super().__init__(username=username, email=email)
+#         self.password = password
+#         self.confirm_password = confirm_password
+#         self.token = token
+
+class ResetPassword(BaseModel):
+    password: str
+    confirm_password: str
+    token: str
+
+
 # custom OAuth2PasswordRequestForm to include email
 class OAuth2PasswordRequestFormWithEmail(OAuth2PasswordRequestForm):
     def __init__(self,
