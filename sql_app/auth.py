@@ -1,11 +1,8 @@
 import os
-from os import close
-
+from contextlib import contextmanager
 from passlib.context import CryptContext
 import jwt
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from typing_extensions import deprecated
-
 from sql_app import schemas, models
 from jwt.exceptions import InvalidTokenError
 from datetime import timedelta, datetime, timezone
@@ -37,7 +34,7 @@ ALGORITH= os.getenv('ALGORITHM')
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 def get_db():
-    db=SessionLocal()
+    db = SessionLocal()
     try:
         yield db
     finally:
@@ -95,12 +92,7 @@ def verify_password(plain_password: str, hashed_password: str):
     return bcrypt_context.verify(plain_password, hashed_password)
 
 def get_user(db: Session, username: str):
-    # if username in db:
-    #     user_dict = db['username']
-    #     return schemas.UserCreate(**user_dict)
     return db.query(models.User).filter(models.User.username == username).first()
-
-
 
 def authenticate_user(db: Session, username: str, password: str):
     user = get_user(db, username)
@@ -160,7 +152,6 @@ async def create_user( create_user_request: schemas.UserCreate, db: Session = De
 
 @router.post("/token", response_model=Token)
 def login_for_access_token(form_data: OAuth2PasswordRequestFormWithEmail = Depends(), db: Session=Depends(get_db)):
-    print(f"form data {form_data.email}")
     user = authenticate_user(db, form_data.username, form_data.password)
     if not user:
         raise  HTTPException (
