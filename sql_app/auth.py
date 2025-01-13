@@ -15,7 +15,9 @@ from sqlalchemy.orm import Session
 from sql_app.database import  SessionLocal, engine
 from pathlib import Path
 from dotenv import load_dotenv
-
+from reset_password_mail import send_reset_password_mail
+from secrets import token_urlsafe
+from sqlalchemy import and_
 
 router = APIRouter(
     prefix='/auth',
@@ -146,6 +148,87 @@ def login_for_access_token(form_data: OAuth2PasswordRequestFormWithEmail = Depen
     access_token_expires = timedelta(minutes = ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = create_access_token(data={"sub": form_data.username, "user_id": user.id, "email": user.email}, expires_delta=access_token_expires)
     return Token(access_token=access_token, token_type='bearer')
+
+def create_reset_token(user: schemas.User, db: Session):
+    EXPIRY_DURATION = 24
+    reset_token = token_urlsafe(32)
+    token_expiry = datetime.now() + timedelta(hours=EXPIRY_DURATION)
+    user.reset_token = reset_token
+    user.reset_token_expiry = token_expiry
+    user. used_reset_token = 0
+    db.add(user)
+    db.commit()
+    db.refresh(user)
+    return user
+
+
+
+@router.post('/forgotten-password', status_code=status.HTTP_201_CREATED, response_model=schemas.User)
+def forgot_password(forgot_password_request: ForgottenPassword, background_tasks: BackgroundTasks, db: Session=Depends(get_db)):
+    user = get_user(db, forgot_password_request.username)
+
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail='User not found'
+        )
+    updated_user = create_reset_token(user, db)
+    if updated_user:
+        send_reset_password_mail(background_tasks, user.email, user.username, updated_user.reset_token)
+        return  updated_user
+
+def validate_reset_password(token: str, db: Session):
+   valid_user_reset = db.query(models.User).filter(
+       and_(
+       models.User.reset_token == token,
+           models.User.used_reset_token == 0,
+           models.User.reset_token_expiry > datetime.now()
+   )
+   ).first()
+   if not valid_user_reset:
+       return {
+              'message': 'Invalid or expired token',
+                'result': 'fail'
+       }
+   return valid_user_reset
+
+
+
+
+@router.put('/reset-password', status_code=status.HTTP_200_OK, response_model=schemas.User)
+def reset_password(
+        password: str = Form(...),
+        confirm_password: str = Form(...),
+        token: str = Form(...),
+        db:Session = Depends(get_db)):
+
+    everything_valid = validate_reset_password(token, db)
+    if everything_valid:
+        match_password = confirm_password == password
+        if not match_password:
+            return {
+                'message': 'Passwords do not match',
+                'result': 'fail',
+                'data': []
+            }
+        everything_valid.hashed_password = get_hashed_password(password)
+        everything_valid.used_reset_token = 1
+        everything_valid.reset_token = None
+        everything_valid.reset_token_expiry = None
+        db.add(everything_valid)
+        db.commit()
+        return {
+            'message': 'Password reset successfully',
+            'result': 'success',
+            'data': everything_valid
+
+        }
+
+
+
+
+
+
 
 
 
