@@ -179,19 +179,29 @@ def create_reset_token(user: schemas.User, db: Session):
 
 
 
-@router.post('/forgotten-password', status_code=status.HTTP_201_CREATED, response_model=schemas.User)
+@router.post('/forgot-password', status_code=status.HTTP_201_CREATED)
 def forgot_password(forgot_password_request: ForgottenPassword, background_tasks: BackgroundTasks, db: Session=Depends(get_db)):
-    user = get_user(db, forgot_password_request.username)
+    user = get_user_by_email(db, forgot_password_request.email)
 
     if not user:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail='User not found'
-        )
+        return {
+            'message': 'User not found',
+            'result': 'fail',
+            'data': []
+        }
     updated_user = create_reset_token(user, db)
     if updated_user:
         send_reset_password_mail(background_tasks, user.email, user.username, updated_user.reset_token)
-        return  updated_user
+        return  {
+            'message': 'Reset token sent to email, kindly reset password',
+            'result': 'success',
+            'data': updated_user
+        }
+    return {
+        'message': 'Something went wrong, please try again',
+        'result': 'fail',
+        'data': []
+    }
 
 def validate_reset_password(token: str, db: Session):
    valid_user_reset = db.query(models.User).filter(
@@ -202,10 +212,7 @@ def validate_reset_password(token: str, db: Session):
    )
    ).first()
    if not valid_user_reset:
-       return {
-              'message': 'Invalid or expired token',
-                'result': 'fail'
-       }
+         return False
    return valid_user_reset
 
 
