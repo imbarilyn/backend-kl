@@ -53,7 +53,6 @@ class Users(BaseModel):
 
 class ForgottenPassword(BaseModel):
     email: str
-    username: str
 
 # class ResetPassword(ForgottenPassword):
 #     def __init__(self,
@@ -159,7 +158,7 @@ def login_for_access_token(form_data: OAuth2PasswordRequestFormWithEmail = Depen
             detail='Wrong credentials',
             headers={"WWW-authorization": 'Bearer'}
         )
-    access_token_expires = timedelta(minutes = ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token_expires = timedelta(days = ACCESS_TOKEN_EXPIRE)
     access_token = create_access_token(data={"sub": form_data.username, "user_id": user.id, "email": user.email}, expires_delta=access_token_expires)
     return Token(access_token=access_token, token_type='bearer')
 
