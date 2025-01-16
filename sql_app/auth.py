@@ -218,7 +218,7 @@ def validate_reset_password(token: str, db: Session):
 
 
 
-@router.put('/reset-password', status_code=status.HTTP_200_OK, response_model=schemas.User)
+@router.put('/reset-password')
 def reset_password(
         password: str = Form(...),
         confirm_password: str = Form(...),
@@ -246,6 +246,10 @@ def reset_password(
             'data': everything_valid
 
         }
+    return {
+        'message': 'Invalid or expired token',
+        'result': 'fail'
+    }
 
 
 
