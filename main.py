@@ -29,10 +29,6 @@ if __name__ == '__main__':
 # Mount upload directory as  static files
     app.mount("/uploads", StaticFiles(directory='uploads'), name="uploads")
 
-origins = [
-    'http://localhost:5173'
-]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins= ['http://localhost:5173'],
@@ -163,6 +159,27 @@ async def update_contract(contract_id: int,
     if db_contract is None:
         # raise HTTPException(status_code=404, detail='Contract not found')
         return {'message': 'Contract not found', 'result': 'fail'}
+    file_ext = file.filename.split('.').pop().lower()
+    if file_ext not in required_ext:
+        raise HTTPException(status_code=400, detail='Invalid file type')
+    file_name = token_hex(10)
+    file_path = os.path.join('uploads', f"{file_name}.{file_ext}")
+    file_name_server = f"{file_name}.{file_ext}"
+    print(f'file name {file_name_server}')
+    with open(file_path, 'wb') as f:
+        content = await file.read()
+        f.write(content)
+    contract = models.Contract(
+        id=contract_id,
+        contract_name=contract_name,
+        category=category,
+        start_date=start_date,
+        end_date=end_date,
+        country=country,
+        vendor_name=vendor_name,
+        company_name=company_name,
+        file_upload=file_name_server
+    )
     return crud.update_contract(db, contract)
 
 
