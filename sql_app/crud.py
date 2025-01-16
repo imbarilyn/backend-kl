@@ -40,10 +40,15 @@ def get_contract(db: Session, contract_id: int):
     return db_contract
 
 
-def get_contract_by_name(db: Session, contract_name: str):
+def get_contract_exists(db: Session, contract_name: str, company_name: str):
     print(f"in the crud {contract_name}")
-    cont = db.query(models.Contract).filter(models.Contract.contract_name == contract_name).first()
-    print(f"the contract is {cont}")
+    cont = db.query(models.Contract).filter(
+        and_(
+            models.Contract.contract_name == contract_name,
+            models.Contract.company_name == company_name
+        )
+    ).first()
+    print('this is the contract', cont)
     return cont
 
 
