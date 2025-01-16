@@ -50,8 +50,8 @@ class ContractBase(BaseModel):
 
 
 class ContractCreate(ContractBase):
-    status: Status = Field(default = Status.active.value, description="Whether it is expired or active")
-    email_sent: EmailSent = Field(default = EmailSent.no.value, description="Whether the email notification for expiration has been sent or not")
+    status: Status = Field(default = Status.active, description="Whether it is expired or active")
+    email_sent: EmailSent = Field(default = EmailSent.no, description="Whether the email notification for expiration has been sent or not")
 
 class Contract(ContractBase):
     id: int
@@ -84,11 +84,9 @@ class User(UserBase):
 
 class ExpiryEmailBase(BaseModel):
     email: str
-class ExpiryEmailBase(BaseModel):
-    email: str
 
 class ExpiryEmailCreate(ExpiryEmailBase):
-    pass
+    email: str
 
 class ExpiryEmail(ExpiryEmailBase):
     id: int
