@@ -1,8 +1,10 @@
 from ast import Bytes
 from operator import index
 
-from sqlalchemy import Column, Integer, String, ForeignKey, Boolean, Date, DateTime, BINARY
+from google.protobuf.util.json_format_proto3_pb2 import EnumType
+from sqlalchemy import Column, Integer, String, Enum, DateTime, BINARY
 from sqlalchemy.orm import relationship
+from .schemas import Status, EmailSent
 from .database import Base
 
 
@@ -31,7 +33,7 @@ class Contract(Base):
     __tablename__ = 'contracts'
 
     id=Column(Integer, primary_key=True)
-    contract_name=Column(String(100), index=True, unique=True)
+    contract_name=Column(String(100))
     category=Column(String(100), index=True)
     start_date=Column(String(20), index=True)
     end_date=Column(String(20), index=True)
@@ -39,8 +41,8 @@ class Contract(Base):
     company_name=Column(String(20), index=True)
     vendor_name=Column(String(100), index=True)
     # status=Column(Boolean, index=True)
-    status=Column(Integer, index=True)
-    email_sent=Column(Integer, index=True)
+    status=Column(Enum(Status), index=True)
+    email_sent=Column(Enum(EmailSent), index=True)
     file_upload=Column(String(50))
 
 
