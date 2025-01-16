@@ -85,7 +85,7 @@ def expired_contracts(db: Session):
 
 
 def create_contract(db: Session, contract: schemas.ContractCreate):
-    print(f"we are now putting the contract in the db hooray{contract}")
+    print(f"we are now putting the contract in the db hooray {contract}")
     db_contract = models.Contract(**contract.model_dump())
     if db_contract is None:
         return {'message': 'Contract not created', 'result': 'fail'}
@@ -105,6 +105,8 @@ def delete_contract(db: Session, contract_id: int):
 
 
 def update_contract(db: Session, contract: schemas.Contract):
+    now = datetime.now()
+    threshold_date = now + timedelta(days=30)
     db_contract = db.query(models.Contract).filter(models.Contract.id == contract.id).first()
     if db_contract:
         db_contract.contract_name = contract.contract_name
@@ -116,6 +118,7 @@ def update_contract(db: Session, contract: schemas.Contract):
         db_contract.company_name = contract.company_name
         db_contract.status = contract.status
         db_contract.file_upload = contract.file_upload
+        db_contract.status = Status.active
         db.commit()
         return {'message': 'Contract updated successfully', 'result': 'success'}
     return {'message': 'Contract not found', 'result': 'fail'}
