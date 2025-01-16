@@ -15,13 +15,8 @@ from dotenv import load_dotenv
 from sql_app.auth import get_current_active_user
 
 
-current_dir = Path(__file__).resolve().parent if '__file__' in locals() else Path.cwd()
-env_directory = current_dir / '.env'
-#
-load_dotenv(env_directory)
-SECRET_KEY=os.getenv('SECRET_KEY')
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+
 
 
 models.Base.metadata.create_all(bind=engine)
@@ -40,7 +35,7 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins= ['http://localhost:5173'],
     allow_credentials=True,
     allow_methods=['*'],
     allow_headers=['*']
@@ -74,10 +69,8 @@ async def create_contract(
 
 ):
     required_ext = {'pdf'}
-    print(f"{contract_name}")
-    db_contract = crud.get_contract_by_name(db=db, contract_name=contract_name)
+    db_contract = crud.get_contract_exists(db=db, contract_name=contract_name, company_name=company_name)
     if db_contract:
-        print(f"the contract exists {db_contract}")
         return {'message': 'Contract already exists', 'result': 'fail'}
         # raise HTTPException(status_code=400, detail='Contract already exists')
 
@@ -153,8 +146,19 @@ def delete_contract(contract_id: int, db: Session = Depends(get_db)):
 
 
 @app.put('/update-contract/{contract_id}')
-def update_contract(contract_id: int, contract: schemas.Contract, db: Session = Depends(get_db)):
-    print(f"the contract is {contract}")
+async def update_contract(contract_id: int,
+                    contract_name: str = Form(...),
+                    category: str = Form(...),
+                    start_date: str = Form(...),
+                    end_date: str = Form(...),
+                    country: schemas.Country = Form(...),
+                    vendor_name: str = Form(...),
+                    company_name: schemas.Company = Form(...),
+                    file: UploadFile = File(...),
+                    db: Session = Depends(get_db)
+                    ):
+    required_ext = {'pdf'}
+    # print(f"the contract is {contract}")
     db_contract = crud.get_contract(db, contract_id)
     if db_contract is None:
         # raise HTTPException(status_code=404, detail='Contract not found')
