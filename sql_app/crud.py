@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.sql.operators import desc_op
+from sqlalchemy import and_
 
 from . import models, schemas
 from fastapi.encoders import jsonable_encoder
