@@ -31,7 +31,7 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl='auth/token')
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 ALGORITH= os.getenv('ALGORITHM')
-ACCESS_TOKEN_EXPIRE_MINUTES=30
+ACCESS_TOKEN_EXPIRE = 7
 
 def get_db():
     db = SessionLocal()
