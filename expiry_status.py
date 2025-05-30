@@ -1,40 +1,62 @@
-from sql_app import models
-from sqlalchemy.orm import Session
-from datetime import datetime, timedelta
-from contextlib import contextmanager
-from sql_app.database import SessionLocal
-import sys
+import pymysql
+from datetime import datetime
+from pathlib import Path
+from dotenv import load_dotenv
 import os
 
-# Add the parent directory of sql_app to the Python path
+#
+current_directory = Path(__file__).resolve().parent if '__file__' in locals() else Path.cwd()
+env_file = current_directory / '.env'
+print(f"expiry status: {env_file}")
+load_dotenv(env_file)
+# load_dotenv("/backend-kl/.env")
 
-# sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-# sys.path.append()
-
-@contextmanager
-def get_db():
-    db_session = SessionLocal()
-    try:
-        yield db_session
-        db_session.commit()
-    except Exception:
-        db_session.rollback()
-        raise
-    finally:
-        db_session.close()
+user = os.getenv('DB_USER_LOCAL')
+localhost = os.getenv('DB_HOST')
+password= os.getenv('DB_PASSWORD')
+database= os.getenv('DB_DATABASE')
+print(f'user: {user}, localhost: {localhost}, password: {password}, database: {database}')
 
 
-def change_status(db: Session):
+
+def change_status():
+    db = pymysql.connect(
+        host=localhost,
+        user=user,
+        password=password,
+        database=database,
+        cursorclass=pymysql.cursors.DictCursor
+    )
+
+
     today = datetime.now()
-    expired_contracts = db.query(models.Contract).filter(
-       models.Contract.end_date <= today.strftime('%Y-%m-%d')).all()
-    if expired_contracts:
-        for contract in expired_contracts:
-            contract.status = 0
-            db.commit()
+    with db.cursor() as cursor:
+        try:
+            query = """
+            SELECT * FROM KlContract.contracts WHERE status = 'active'
+            """
+            cursor.execute(query)
+            contracts = cursor.fetchall()
+            for contract in contracts:
+                end_date = contract['end_date']
+                if end_date <= today.date():
+                    try:
+                        query = """
+                        UPDATE KlContract.contracts SET status = 'expired' WHERE id = %s
+                        """
+                        cursor.execute(query, contract['id'])
+                        print(f'Contract expired: {contract["contract_name"]}, time: {datetime.now()}')
+                        db.commit()
+
+                    except Exception as e:
+                        print(f'Error updating contract expired: {e} time: {datetime.now()}')
+        except Exception as e:
+            print(f'Error fetching contracts: {e}, time: {datetime.now()}')
+        finally:
+            db.close()
 
 
-with get_db() as database_session:
-    change_status(database_session)
-    print(f"Status changed successfully {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-print("Completely out of the context manager code block")
+# cron job running daily
+if __name__ == '__main__':
+    change_status()
+
