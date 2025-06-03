@@ -179,10 +179,6 @@ def expiring_contracts_three_months():
                         mark_email_sent(contract['id'])
                     else:
                         print(f'Email not sent, time: {datetime.now()} contract: {contract["contract_name"]}')
-                # if update_email_sent:
-                #     print(f'Email sent updated successfully, time: {datetime.now()}')
-                # else:
-                #     print(f'Email sent not updated, time: {datetime.now()}')
         else:
             print(f'No contracts expiring in 90 days time: {datetime.now()}')
     else:
