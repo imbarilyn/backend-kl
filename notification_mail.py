@@ -5,11 +5,11 @@ from smtplib import SMTPException
 
 import pymysql.connections
 from dotenv import load_dotenv
-from email.message import EmailMessage
 from email.utils import formataddr
 from pymysql.cursors import DictCursor
 from datetime import datetime, timedelta
-
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
 
 
 
@@ -30,7 +30,7 @@ load_dotenv(env_directory)
 # Now we have all the environment variables
 sender_email = os.getenv('SENDER_EMAIL')
 password_email = os.getenv('EMAIL_PASSWORD')
-receiver = os.getenv('RECEIVER_EMAIL')
+# receiver = os.getenv('RECEIVER_EMAIL')
 port = 587
 smtp_server = os.getenv('SMTP_SERVER')
 user = os.getenv('DB_USER_LOCAL')
@@ -74,9 +74,33 @@ def send_email_expired_contract(subject, receiver_email, expiry_date, contract_n
                 <p>&copy; 2025 VulavuTech Group | Need help? <a href="mailto:info@vulavutech.org">Contact Support</a></p>
             </body>
         </html>
-        """,
-        subtype='html'
-    )
+        """
+
+    text = f"""\
+    Hello,
+    
+    This is to inform you that the contract for {contract_name} with {vendor_name} for {country} will expire on {expiry_date}.
+    
+    Please take the necessary steps to renew the contract.
+    
+    Thank you.
+    
+    Best Regards,
+    VulavuTech Group
+    
+    © 2025 VulavuTech Group | Need help? Contact Support: info@vulavutech.org    
+    """
+
+    message = MIMEMultipart("alternative")
+    message["Subject"] = subject
+    message["From"] = formataddr(('Vulavu Tech', f'{sender_email}'))
+    message["To"] = receiver_email
+
+    # Attach both text and html multipart messages for recipient
+    message.attach(MIMEText(html, "html"))
+    message.attach(MIMEText(text, "plain"))
+
+
 
     try:
         with smtplib.SMTP(smtp_server, port) as server:
