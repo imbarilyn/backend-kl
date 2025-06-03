@@ -51,13 +51,11 @@ db = pymysql.connect(
 # Now writing the function for sending emails
 def send_email_expired_contract(subject, receiver_email, expiry_date, contract_name, vendor_name, country):
     # initialize the EmailMessage object
-    msg = EmailMessage()
-    msg['Subject'] = subject
-    msg['From'] = formataddr(('Contract Expiry Notification', f'{sender_email}'))
-    msg['To'] = receiver_email
-
-    msg.add_alternative(
-        f"""\
+    # msg = EmailMessage()
+    # msg['Subject'] = subject
+    # msg['From'] = formataddr(('Contract Expiry Notification', f'{sender_email}'))
+    # msg['To'] = receiver_email
+    html = f"""\
         <html>
             <body>
                 <p>Hello,</p>
@@ -104,10 +102,11 @@ def send_email_expired_contract(subject, receiver_email, expiry_date, contract_n
 
     try:
         with smtplib.SMTP(smtp_server, port) as server:
+            server.ehlo()
             server.starttls()
+            server.ehlo()
             server.login(sender_email, password_email)
-            # server.send_message(msg)
-            server.sendmail(sender_email, receiver_email, msg.as_string())
+            server.sendmail(sender_email, receiver_email, message.as_string())
             print('Email sent successfully')
             return True
     except SMTPException as e:
