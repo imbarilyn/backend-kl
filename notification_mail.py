@@ -96,7 +96,7 @@ def send_email_expired_contract(subject, receiver_email, expiry_date, contract_n
 
     # Attach both text and html multipart messages for recipient
     message.attach(MIMEText(html, "html"))
-    message.attach(MIMEText(text, "plain"))
+    # message.attach(MIMEText(text, "plain"))
 
 
 
